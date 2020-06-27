@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  db:
+    container_name: 'postgresql'
+    image: 'postgres:alpine'
+    environment:
+      POSTGRES_PASSWORD: docker
+      POSTGRES_USER: postgres
+      POSTGRES_DB: gostack_desafio06
+    ports:
+      - 5432:5432
+    restart: always
+
+

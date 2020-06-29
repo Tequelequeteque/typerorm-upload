@@ -47,7 +47,6 @@ transactionsRouter.post(
   '/import',
   upload.single('file'),
   async (request, response) => {
-    console.log(request.file);
     const importTransactionsService = new ImportTransactionsService();
     const transactions = await importTransactionsService.execute(
       request.file.path,
